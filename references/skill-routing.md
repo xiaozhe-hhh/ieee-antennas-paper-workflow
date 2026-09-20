@@ -11,7 +11,7 @@ available, use the listed fallback while preserving the same artifact contract.
 | idea-development | `research-paper-writing` plus relevant domain skill | Ranked research hypotheses | Keep every idea labelled proposed |
 | evidence-planning | `ieee-antennas-writing` for antenna claims; otherwise `research-paper-writing` | Claim-evidence map and experiment plan | Direct evidence mapping |
 | manuscript-writing | `ieee-antennas-writing` for TAP/AWPL; otherwise `research-paper-writing` | Evidence-bounded draft | Venue-specific official instructions prevail |
-| scientific-figures | `nature-figure` for plots and multipanel figures; `scibox-diagram` for editable schematics | Figure brief and final assets | Preserve raw data and editability |
+| scientific-figures | This skill's `figure-workflow.md` for TAP/AWPL antenna semantics; `nature-figure` for rendered plot QA; `scibox-diagram` for editable schematics | Figure Brief, editable source, final assets, caption draft, and QA report | Resolve TAP or AWPL; preserve raw data and block unsupported antenna/SAR claims |
 | latex-production | `ieee-antennas-writing` for TAP/AWPL | Buildable manuscript project | Current official venue template |
 | review | `nature-reviewer` and `nature-ref-verifier` | Findings and verified references | Separate technical and citation audits |
 | humanize | `humanizer` | Natural draft plus fact-diff audit | Style edit only after technical freeze |

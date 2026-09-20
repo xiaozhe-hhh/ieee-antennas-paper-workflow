@@ -29,8 +29,15 @@ and author action.
 
 ## Figure Brief
 
-Fields: message, target venue/width, source data, panels, axes and units,
-annotations, caption facts, editable output, export formats, and visual QA result.
+Fields: identifier, target venue, primary conclusion, evidence source and
+location, evidence type, raw-data or media provenance, final physical width,
+figure archetype, panels and inferential roles, antenna/port/frequency/unit
+metadata, power/phase/termination/normalization conditions where applicable,
+simulated or measured status, axes, annotations, caption facts, editable source,
+export formats, evidence gaps, author checks, and visual/semantic QA result.
+
+Status is `complete`, `partial`, or `blocked`. A missing condition blocks only
+the claim or panel that requires it; unrelated, source-grounded work may proceed.
 
 ## Manuscript Handoff
 

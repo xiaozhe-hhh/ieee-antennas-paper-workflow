@@ -60,6 +60,11 @@ Create a figure brief before drawing. Preserve source data, units, coordinate
 systems, legends, panel mappings, and editable originals. Use `nature-figure`
 for data figures and `scibox-diagram` for editable mechanism or setup diagrams.
 
+For TAP/AWPL antenna figures, follow `figure-workflow.md`: resolve the venue,
+record antenna-specific evidence conditions, select the figure archetype and
+tool route, and audit the exported result at final physical width. General
+figure tools do not override antenna evidence requirements.
+
 Gate: labels remain readable at final column width and captions can stand alone.
 
 ## 8. Build LaTeX

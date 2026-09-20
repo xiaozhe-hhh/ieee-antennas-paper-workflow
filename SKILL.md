@@ -34,6 +34,12 @@ specialist. For a multi-stage request, read
 one stage hands work to another. Before approving any output, apply
 [references/quality-gates.md](references/quality-gates.md).
 
+For antenna plots, geometry diagrams, field/current/SAR maps, prototype photos,
+or multi-panel composition, read
+[references/figure-workflow.md](references/figure-workflow.md). It owns the
+Figure Brief, TAP/AWPL figure routing, evidence blockers, execution route, and
+delivery package for the `scientific-figures` stage.
+
 When progress depends on author-supplied files, parameters, decisions, or
 experimental evidence, read
 [references/author-material-guide.md](references/author-material-guide.md).

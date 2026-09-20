@@ -25,6 +25,15 @@
 
 - Figure data, labels, units, captions, and panel references agree with the text.
 - Editable sources and final exports are retained.
+- Antenna figures retain ports, frequencies, coordinate conventions,
+  normalization, and simulated/measured status where applicable.
+- SAR/current/field figures retain their excitation, power, phase, termination,
+  model, spacing, averaging, scale, and normalization conditions as applicable.
+- Figures are rendered and inspected at their final physical column width;
+  source-file zoom is not a legibility check.
+- `FIX BEFORE DELIVERY` and missing scientific conditions block
+  submission-ready delivery. `NOT AUDITABLE` must remain visible as a blocker
+  when a required rendered check cannot run.
 - LaTeX reaches a stable build; rendered pages are visually inspected.
 - Unresolved references, missing assets, overflow, and placeholders block submission.
 
