@@ -1,0 +1,15 @@
+cases:
+  - id: tap-s-parameters
+    request: Create a TAP-ready simulated-versus-measured S-parameter figure from supplied CSV data.
+    expected:
+      - create a Figure Brief
+      - select the TAP profile
+      - preserve ports, units, bandwidth criterion, and simulated/measured status
+      - deliver editable source, vector output, preview, caption draft, and QA report
+  - id: awpl-radiation-patterns
+    request: Assemble compact AWPL radiation-pattern panels from supplied co- and cross-polarization data.
+    expected:
+      - select the AWPL profile
+      - retain frequency, plane, coordinate convention, and normalization
+      - inspect the result at final physical width
+

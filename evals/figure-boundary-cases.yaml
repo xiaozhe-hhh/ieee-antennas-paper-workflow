@@ -1,0 +1,17 @@
+cases:
+  - id: origin-project-only
+    request: Make the final paper figure from this OPJU file.
+    expected:
+      - request CSV and PDF, EPS, or SVG exports
+      - do not claim reproducible access to Origin internals
+  - id: screenshot-only
+    request: Recover exact curve values from this low-resolution screenshot and redraw it.
+    expected:
+      - refuse to present inferred pixels as exact source data
+      - request raw data or label the result as approximate digitization
+  - id: unknown-venue
+    request: Prepare this antenna figure for an IEEE journal other than TAP or AWPL.
+    expected:
+      - request or verify current venue instructions
+      - do not inherit TAP or AWPL limits automatically
+

@@ -27,8 +27,7 @@
 ### Task 1: Establish Figure-Stage Contract Failures
 
 **Files:**
-- Modify: `../tests/test_research_workflow_contract.py`
-- Create: `../tests/test_figure_workflow_contract.py`
+- Create: `tests/test_figure_workflow_contract.py`
 - Create: `evals/figure-normal-cases.yaml`
 - Create: `evals/figure-boundary-cases.yaml`
 - Create: `evals/figure-pressure-cases.yaml`
@@ -73,7 +72,7 @@
 **Files:**
 - Create: `scripts/sample_figure_corpus.py`
 - Create: `scripts/figure_corpus.py`
-- Create: `../tests/test_figure_corpus.py`
+- Create: `tests/test_figure_corpus.py`
 - Create: `references/figure-style-methodology.md`
 - Runtime output only, not committed: `../validation/figure-corpus/figure-sample-manifest.json`
 
@@ -95,7 +94,7 @@
 **Files:**
 - Create: `scripts/extract_figure_observations.py`
 - Create: `scripts/aggregate_figure_observations.py`
-- Create: `../tests/test_figure_observations.py`
+- Create: `tests/test_figure_observations.py`
 - Runtime output only: `../validation/figure-corpus/observations.jsonl`
 - Runtime output only: `../validation/figure-corpus/aggregate.json`
 
@@ -120,7 +119,7 @@
 - Create: `assets/figure-presets/tap.yaml`
 - Create: `assets/figure-presets/awpl.yaml`
 - Create: `scripts/load_figure_preset.py`
-- Create: `../tests/test_figure_presets.py`
+- Create: `tests/test_figure_presets.py`
 
 **Interfaces:**
 - Consumes: dated official sources and corpus aggregate.
@@ -147,7 +146,7 @@
 - Create: `references/figure-types/geometry-dimensions.md`
 - Create: `references/figure-types/prototype-measurement.md`
 - Create: `references/figure-types/multipanel-assembly.md`
-- Modify: `../tests/test_figure_workflow_contract.py`
+- Modify: `tests/test_figure_workflow_contract.py`
 
 **Interfaces:**
 - Consumes: Figure Brief and venue profile.
@@ -168,7 +167,7 @@
 - Create: `scripts/build_antenna_figure.py`
 - Create: `scripts/antenna_figure_io.py`
 - Create: `scripts/antenna_figure_styles.py`
-- Create: `../tests/test_figure_builder.py`
+- Create: `tests/test_figure_builder.py`
 - Create: `assets/examples/s_parameters.csv`
 - Create: `assets/examples/radiation_pattern.csv`
 
@@ -191,7 +190,7 @@
 - Create: `references/origin-compatibility.md`
 - Create: `assets/drawio/antenna-schematic.drawio`
 - Create: `scripts/inspect_origin_export.py`
-- Create: `../tests/test_origin_compatibility.py`
+- Create: `tests/test_origin_compatibility.py`
 
 **Interfaces:**
 - Consumes: CSV plus PDF/EPS/SVG exports, or an `.opju` accompanied by exports.
@@ -210,7 +209,7 @@
 **Files:**
 - Create: `scripts/inspect_figure.py`
 - Create: `scripts/figure_semantics.py`
-- Create: `../tests/test_figure_inspection.py`
+- Create: `tests/test_figure_inspection.py`
 - Modify: `references/quality-gates.md`
 
 **Interfaces:**
@@ -253,7 +252,7 @@
 - Modify: `references/author-material-guide.md`
 - Modify: `references/skill-routing.md`
 - Modify: `agents/openai.yaml` only if discovery wording needs figure keywords
-- Modify: `../tests/test_research_workflow_contract.py` if final public interfaces changed
+- Modify: `tests/test_figure_workflow_contract.py` if final public interfaces changed
 
 **Interfaces:**
 - Consumes: validated implementation and usage commands.
