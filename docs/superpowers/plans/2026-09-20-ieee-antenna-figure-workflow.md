@@ -244,7 +244,7 @@
 - [ ] Build an editable geometry or prototype/measurement composition.
 - [ ] Record defects found, repairs made, remaining limitations, environment, and exact commands in the validation report.
 - [ ] Rerun focused tests after each supported repair.
-- [ ] Commit only non-private validation documentation and safe fixtures: `test: validate four antenna figure workflows`.
+- [ ] Commit: `test: validate four antenna figure workflows`; include only non-private validation documentation and safe fixtures.
 
 ### Task 11: Integrate Documentation and Release
 
