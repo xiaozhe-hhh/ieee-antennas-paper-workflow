@@ -1,8 +1,10 @@
-# Research Paper Workflow：科研论文全流程 Skill
+# IEEE Antennas Paper Workflow：IEEE 天线论文全流程 Skill
 
-这是一个面向 Codex 的科研论文全流程编排 Skill，用于从研究问题定义、文献调研和论文精读，一直推进到证据规划、论文写作、LaTeX 排版、审稿修改、语言润色和汇报材料制作。
+这是一个面向 Codex 的 **IEEE 天线论文全流程编排 Skill**，重点服务于 `IEEE Transactions on Antennas and Propagation`（TAP）和 `IEEE Antennas and Wireless Propagation Letters`（AWPL）。它用于从天线研究问题定义、文献调研和论文精读，一直推进到 HFSS/实验/SAR 证据规划、英文论文写作、IEEEtran LaTeX 排版、审稿修改、语言润色和投稿检查。
 
-本仓库只包含工作流编排层。它负责识别当前研究阶段、调用合适的专用 Skill，并保持“论文主张 - 实验或文献证据 - 来源位置”之间的可追溯关系。仓库不捆绑第三方 Skill、期刊模板、论文 PDF、用户稿件或实验数据。
+本 Skill 的默认领域是天线与传播，默认稿件语言是英文。它负责识别当前阶段、调用合适的专用 Skill，并保持“天线论文主张 - 仿真/测量/理论/文献证据 - 来源位置”之间的可追溯关系。对于 TAP、AWPL 以外的 IEEE 期刊或会议，必须以对应 venue 的最新官方作者指南和模板为准。
+
+本仓库只包含工作流编排层，不捆绑第三方 Skill、出版商模板、论文 PDF、用户稿件、HFSS 工程或实验数据。
 
 ## 主要功能
 
@@ -41,7 +43,7 @@ Skill 会从最近一个有效成果和检查点继续工作，而不是每次�
 ```powershell
 $codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
 New-Item -ItemType Directory -Force (Join-Path $codexRoot 'skills') | Out-Null
-git clone https://github.com/xiaozhe-hhh/research-paper-workflow.git (Join-Path $codexRoot 'skills\research-paper-workflow')
+git clone https://github.com/xiaozhe-hhh/ieee-antennas-paper-workflow.git (Join-Path $codexRoot 'skills\ieee-antennas-paper-workflow')
 ```
 
 如果已经下载了本仓库，也可以在仓库的上一级目录中复制安装：
@@ -49,15 +51,15 @@ git clone https://github.com/xiaozhe-hhh/research-paper-workflow.git (Join-Path 
 ```powershell
 $codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
 New-Item -ItemType Directory -Force (Join-Path $codexRoot 'skills') | Out-Null
-Copy-Item -Recurse -Force '.\research-paper-workflow' (Join-Path $codexRoot 'skills')
+Copy-Item -Recurse -Force '.\ieee-antennas-paper-workflow' (Join-Path $codexRoot 'skills')
 ```
 
 ### Linux 或 macOS
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-git clone https://github.com/xiaozhe-hhh/research-paper-workflow.git \
-  "${CODEX_HOME:-$HOME/.codex}/skills/research-paper-workflow"
+git clone https://github.com/xiaozhe-hhh/ieee-antennas-paper-workflow.git \
+  "${CODEX_HOME:-$HOME/.codex}/skills/ieee-antennas-paper-workflow"
 ```
 
 安装完成后，请重新启动 Codex 或新建一个会话，以刷新 Skill 发现结果。
@@ -67,25 +69,25 @@ git clone https://github.com/xiaozhe-hhh/research-paper-workflow.git \
 可以显式调用该 Skill：
 
 ```text
-使用 $research-paper-workflow 判断我的论文当前处于哪个阶段，并从最近的有效成果继续推进。
+使用 $ieee-antennas-paper-workflow 判断我的 IEEE 天线论文当前处于哪个阶段，并从最近的有效成果继续推进。
 ```
 
 常见任务示例：
 
 ```text
-使用 $research-paper-workflow 阅读这些论文，并建立文献对比矩阵。
+使用 $ieee-antennas-paper-workflow 阅读这些 TAP/AWPL 论文，并建立天线文献对比矩阵。
 ```
 
 ```text
-使用 $research-paper-workflow 检查稿件中每项主张需要哪些证据。
+使用 $ieee-antennas-paper-workflow 检查稿件中每项天线性能和机理主张需要哪些证据。
 ```
 
 ```text
-使用 $research-paper-workflow 逐条处理这些审稿意见，不要编造缺失实验。
+使用 $ieee-antennas-paper-workflow 逐条处理这些审稿意见，不要编造缺失实验。
 ```
 
 ```text
-使用 $research-paper-workflow 把当前 Word 稿件整理为目标期刊的 LaTeX 项目。
+使用 $ieee-antennas-paper-workflow 把当前 Word 稿件整理为 AWPL 的 IEEEtran LaTeX 项目。
 ```
 
 论文正文默认使用英文；研究规划、阅读笔记和与作者的沟通可以使用中文。
@@ -102,7 +104,7 @@ git clone https://github.com/xiaozhe-hhh/research-paper-workflow.git \
 
 完整指南见[作者材料逐步交接指南](references/author-material-guide.md)。其中包含研究任务、文献、设计、仿真、测量、图表、稿件和审稿修改八类材料包，以及专门针对 IEEE 天线与 SAR 论文的清单。
 
-## IEEE 天线与 SAR 支持
+## IEEE 天线与 SAR 核心能力
 
 配合 `ieee-antennas-reader` 和 `ieee-antennas-writing` 使用时，本 Skill 可以支持 TAP、AWPL 等 IEEE 天线论文工作，包括：
 
@@ -135,7 +137,7 @@ git clone https://github.com/xiaozhe-hhh/research-paper-workflow.git \
 ## 仓库结构
 
 ```text
-research-paper-workflow/
+ieee-antennas-paper-workflow/
 |-- SKILL.md                         # Skill 入口与核心约束
 |-- README.md                        # 中文使用说明
 |-- agents/

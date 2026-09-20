@@ -1,14 +1,15 @@
 ---
-name: research-paper-workflow
-description: Use when planning or executing an end-to-end research-paper workflow, including literature discovery, paper reading, idea development, evidence planning, IEEE antenna writing, scientific figures, LaTeX production, review, natural-language polishing, or research presentations.
+name: ieee-antennas-paper-workflow
+description: Use when planning, writing, revising, or preparing an IEEE antenna paper, especially for TAP or AWPL, including antenna literature review, HFSS or measurement evidence, SAR claims, figures, IEEEtran LaTeX, reviewer responses, and submission checks.
 ---
 
-# Research Paper Workflow
+# IEEE Antennas Paper Workflow
 
-Orchestrate specialized skills; do not merge or duplicate them. Determine the
-current stage from the user's request and existing artifacts, invoke only the
-skills needed for that stage, and preserve traceability between claims and
-sources throughout the workflow.
+Orchestrate an evidence-grounded IEEE antenna paper from research framing to
+submission artifacts. Determine the current stage from the user's request and
+existing artifacts, invoke only the specialists needed for that stage, and
+preserve traceability between antenna claims, simulation or measurement
+conditions, and sources throughout the workflow.
 
 ## Stage Router
 
@@ -57,6 +58,9 @@ before submission.
   novelty, or experimental outcomes. Use `[TO BE PROVIDED]` for missing facts.
 - Default manuscript language is English. Chinese may be used for planning,
   reading notes, and communication with the user.
+- Default domain is antennas and propagation, with first-class routing for IEEE
+  TAP and AWPL. For another IEEE venue, use its current official instructions
+  and template; do not infer venue-specific limits from TAP or AWPL.
 - Freeze technical content before `humanize`. After natural-language polishing,
   compare the result with the frozen draft and restore any changed fact.
 - External applications and MCP servers are optional capabilities, not embedded

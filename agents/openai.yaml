@@ -1,5 +1,4 @@
 interface:
-  display_name: "Research Paper Workflow"
-  short_description: "Route an evidence-grounded research paper from literature to publication artifacts"
-  default_prompt: "Use $research-paper-workflow to identify my current research-paper stage and continue from the latest valid checkpoint."
-
+  display_name: "IEEE Antennas Paper Workflow"
+  short_description: "Build evidence-grounded IEEE TAP and AWPL antenna papers"
+  default_prompt: "Use $ieee-antennas-paper-workflow to identify my IEEE antenna paper stage and continue from the latest valid checkpoint."
