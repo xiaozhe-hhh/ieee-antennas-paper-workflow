@@ -1,0 +1,5 @@
+interface:
+  display_name: "Research Paper Workflow"
+  short_description: "Route an evidence-grounded research paper from literature to publication artifacts"
+  default_prompt: "Use $research-paper-workflow to identify my current research-paper stage and continue from the latest valid checkpoint."
+
